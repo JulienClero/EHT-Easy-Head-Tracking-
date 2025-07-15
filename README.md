@@ -156,15 +156,15 @@ const float alpha = 0.99f;  // 0.95-0.99 recommended
 │   │   └── eht_v1.ino         # Main ESP32 code v1.0
 │   └── v2.0/
 │       └── eht_v2.ino         # Future code with magnetometer
-├── hardware/
+├── hardware/              #Coming Soon
 │   ├── pcb/
-│   │   ├── eht_pcb.kicad_pro  # EHT Custom PCB (KiCad)
+│   │   ├── eht_pcb.kicad_pro  # EHT Custom PCB (Fusion 360)
 │   │   ├── gerber/            # Manufacturing files
 │   │   └── bom.csv            # Bill of materials
 │   └── 3d_models/
 │       ├── case_v1/           # Prototype case
 │       └── case_v2/           # Final case
-├── docs/
+├── docs/                  #Coming Soon
 │   ├── assembly_guide.md      # Assembly guide
 │   ├── calibration.md         # Calibration guide
 │   └── troubleshooting.md     # Troubleshooting
@@ -213,18 +213,6 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 - [ ] **USB-C charging circuit** - Fast charging
 - [ ] **Waterproof case** - Outdoor usage
 - [ ] **Status LEDs** - Battery, WiFi, tracking
-
-### Version 3.0 (Vision)
-- [ ] Multiple ESP32 support (body tracking)
-- [ ] Advanced IMU fusion (Kalman)
-- [ ] Bluetooth Low Energy
-- [ ] Dedicated mobile app
-
-## 👥 Community
-
-- **Discord**: [Discord server link]
-- **Forum**: [Forum link]
-- **Reddit**: r/hotas, r/simracing
 
 ---
 
