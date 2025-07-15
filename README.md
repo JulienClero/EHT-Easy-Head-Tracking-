@@ -186,11 +186,7 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 ## 🎮 Tested Games
 
 - ✅ **DCS World** (freetrack)
-- ✅ **IL-2 Sturmovik** (TrackIR)
-- ✅ **War Thunder** (freetrack)
-- ✅ **Elite Dangerous** (freetrack)
-- ✅ **Assetto Corsa** (freetrack)
-- ✅ **Euro Truck Simulator 2** (freetrack)
+- ✅ **Star Citizen** (freetrack)
 
 ## 🔮 Roadmap
 
