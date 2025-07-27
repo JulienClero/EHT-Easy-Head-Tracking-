@@ -158,7 +158,7 @@ const float alpha = 0.99f;  // 0.95-0.99 recommended
 │       └── eht_v2.ino         # Future code with magnetometer
 ├── hardware/              #Coming Soon
 │   ├── pcb/
-│   │   ├── eht_pcb.kicad_pro  # EHT Custom PCB (Fusion 360)
+│   │   ├── eht_pcb            # EHT Custom PCB (Fusion 360)
 │   │   ├── gerber/            # Manufacturing files
 │   │   └── bom.csv            # Bill of materials
 │   └── 3d_models/
@@ -195,12 +195,6 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 - [x] WiFi UDP transmission
 - [x] Complementary filter
 - [x] OpenTrack compatibility
-
-### Version 1.5 (In Progress)
-- [ ] Code optimization
-- [ ] Web interface for configuration
-- [ ] Automatic calibration
-- [ ] Multiple profile support
 
 ### Version 2.0 (Planned)
 - [ ] **EHT Custom PCB** - Compact and professional design
