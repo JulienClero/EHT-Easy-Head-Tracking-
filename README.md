@@ -7,6 +7,7 @@ A DIY head tracking system using ESP32 and MPU6050 for gaming and simulations, c
 - **6DOF Tracking**: Yaw, Pitch, Roll with gyroscope and accelerometer
 - **WiFi Transmission**: Real-time UDP data streaming
 - **Complementary Filter**: Eliminates drift on pitch/roll
+- **Start Up Yaw Calibartion**: Minimizes yaw drift
 - **Low Latency**: Less than 20ms end-to-end
 - **OpenTrack Compatible**: Plug & play with games and simulators
 
