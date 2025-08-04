@@ -4,7 +4,7 @@ A DIY head tracking system using ESP32 and MPU6050 for gaming and simulations, c
 
 ## 🎯 Features
 
-- **6DOF Tracking**: Yaw, Pitch, Roll with gyroscope and accelerometer
+- **3DOF Tracking**: Yaw, Pitch, Roll with gyroscope and accelerometer
 - **WiFi Transmission**: Real-time UDP data streaming
 - **Complementary Filter**: Eliminates drift on pitch/roll
 - **Start Up Yaw Calibartion**: Minimizes yaw drift
@@ -77,6 +77,7 @@ IPAddress pcIP(192, 168, 1, XXX);  // Your PC IP
 ### 3. Flash ESP32
 - Select board: `ESP32 Dev Module`
 - Select serial port
+- Make modifications to the code : Fill in your wifi ssid, password and your PC's IP adress (2. Configure Code)
 - Compile and upload
 
 ## 🎮 OpenTrack Configuration
@@ -94,20 +95,20 @@ Download from: https://github.com/opentrack/opentrack/releases
    - `TrackIR` (for compatible games)
 
 3. **Mapping**: Adjust to your preferences
-   - Yaw: ±180° → ±45°
-   - Pitch: ±90° → ±30°
-   - Roll: ±90° → ±20°
 
-### 3. Calibration
+### 3. Use
+- Switch on your EHT
+- Stay still while it calibrates (10 sec default)
 - Start OpenTrack
 - Click "Start"
-- Calibrate neutral position with `Ctrl+Home`
+- You should see the octopus move with your head
+
 
 ## 📊 Performance
 
 - **Frequency**: 100Hz (10ms per sample)
 - **Total Latency**: < 20ms
-- **Accuracy**: ±1° (pitch/roll), ±3° (yaw)
+- **Accuracy**: ±1° (pitch/roll), ±2° (yaw)
 - **Drift**: None on pitch/roll, slight on yaw
 
 ## 🔧 Advanced Settings
@@ -149,29 +150,6 @@ const float alpha = 0.99f;  // 0.95-0.99 recommended
 - Use 5GHz WiFi if possible
 - Disable WiFi sleep mode
 
-## 📁 Project Structure
-
-```
-├── firmware/
-│   ├── v1.0/
-│   │   └── eht_v1.ino         # Main ESP32 code v1.0
-│   └── v2.0/
-│       └── eht_v2.ino         # Future code with magnetometer
-├── hardware/              #Coming Soon
-│   ├── pcb/
-│   │   ├── eht_pcb            # EHT Custom PCB (Fusion 360)
-│   │   ├── gerber/            # Manufacturing files
-│   │   └── bom.csv            # Bill of materials
-│   └── 3d_models/
-│       ├── case_v1/           # Prototype case
-│       └── case_v2/           # Final case
-├── docs/                  #Coming Soon
-│   ├── assembly_guide.md      # Assembly guide
-│   ├── calibration.md         # Calibration guide
-│   └── troubleshooting.md     # Troubleshooting
-└── README.md                  # This file
-```
-
 ## 🤝 Contributing
 
 Contributions are welcome! Feel free to:
@@ -195,15 +173,15 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 - [x] 3DOF tracking (Yaw, Pitch, Roll)
 - [x] WiFi UDP transmission
 - [x] Complementary filter
+- [x] Yaw Calibration
 - [x] OpenTrack compatibility
 
 ### Version 2.0 (Planned)
 - [ ] **EHT Custom PCB** - Compact and professional design
 - [ ] **Magnetometer support** - Eliminates yaw drift
-- [ ] **Integrated Li-Po battery** - 8-12h autonomy
+- [ ] **Integrated battery** - 8-12h autonomy
 - [ ] **USB-C charging circuit** - Fast charging
-- [ ] **Waterproof case** - Outdoor usage
-- [ ] **Status LEDs** - Battery, WiFi, tracking
+- [ ] **Status LEDs or Small OLED Screen** - Battery, WiFi, tracking
 
 ---
 
