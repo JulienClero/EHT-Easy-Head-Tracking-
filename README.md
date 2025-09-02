@@ -4,14 +4,14 @@ A DIY head tracking system using ESP32 and MPU6050 for gaming and simulations, c
 
 ## 🎯 Features
 
-- **3DOF Tracking**: Yaw, Pitch, Roll with gyroscope and accelerometer
+- **3DOF Tracking**: Yaw, Pitch, Roll with gyroscope, accelerometer and magnetometer
 - **WiFi Transmission**: Real-time UDP data streaming
 - **Complementary Filter**: Eliminates drift on pitch/roll
 - **Start Up Yaw Calibartion**: Minimizes yaw drift
 - **Low Latency**: Less than 20ms end-to-end
 - **OpenTrack Compatible**: Plug & play with games and simulators
 
-## 🔧 Required Components
+## 🔧 Components
 
 ### Current Version (v1.0)
 - **ESP32** (DevKit v1 or similar) - ~$8
@@ -20,18 +20,13 @@ A DIY head tracking system using ESP32 and MPU6050 for gaming and simulations, c
 - **Case/mount** (3D printing recommended) - ~$2
 
 ### Future Version (v2.0) - In Development
-- **ESP32** (DevKit v1 or similar) - ~$8
-- **MPU6050** (accelerometer + gyroscope) - ~$3
-- **Magnetometer** (HMC5883L/QMC5883L) - ~$4
-- **EHT Custom PCB** (currently being designed) - ~$5
-- **Li-Po Battery** (500-1000mAh) - ~$8
-- **Charging Circuit** (TP4056 or integrated PCB) - ~$3
-- **ON/OFF Switch** - ~$1
-- **Custom Case** (3D printed) - ~$3
-
-### Total Cost
-- **v1.0 (wired)**: ~$15
-- **v2.0 (wireless)**: ~$35
+- **ESP32-S3 N4** - ~$3.8 (JLCPCB)
+- **ICM-20948** (9-axis, accelerometer + gyroscope + magnetometer) - ~$4.5
+- **EHT Custom PCB** (currently being designed)
+- **Li-Ion Battery** (500-1000mAh)
+- **Charging Circuit** (integrated PCB)
+- **ON/OFF Switch**
+- **Custom Case** (3D printed) - <$1
 
 ## 📐 Wiring Diagram
 
@@ -45,15 +40,7 @@ GPIO21  ---    SDA
 GPIO22  ---    SCL
 ```
 
-### Version v2.0 (Custom PCB - Coming Soon)
-```
-ESP32          MPU6050         Magnetometer    Battery
------          -------         ------------    -------
-3.3V    ---    VCC      ---    VCC      ---    TP4056 OUT+
-GND     ---    GND      ---    GND      ---    TP4056 OUT-
-GPIO21  ---    SDA      ---    SDA
-GPIO22  ---    SCL      ---    SCL
-```
+### Version v2.0 (Custom PCB)
 *Detailed schematic available with custom PCB*
 
 ## 🚀 Installation
@@ -111,7 +98,7 @@ Download from: https://github.com/opentrack/opentrack/releases
 - **Accuracy**: ±1° (pitch/roll), ±2° (yaw)
 - **Drift**: None on pitch/roll, slight on yaw
 
-## 🔧 Advanced Settings
+## 🔧 Advanced Settings (v1.0)
 
 ### Sensitivity Adjustment
 ```cpp
